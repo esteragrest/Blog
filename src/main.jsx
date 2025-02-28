@@ -1,12 +1,16 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { Blog } from './Blog';
+import { Provider } from 'react-redux';
+import { store } from './store';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<BrowserRouter>
-		<Blog />
+		<Provider store={store}>
+			<Blog />
+		</Provider>
 	</BrowserRouter>,
 );

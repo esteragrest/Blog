@@ -47,6 +47,7 @@
     -   id
     -   login
     -   roleID
+    -   session
 -   posts - массив post:
     -   id
     -   title
