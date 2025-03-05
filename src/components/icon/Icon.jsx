@@ -10,6 +10,8 @@ const IconContainer = ({ className, id, ...props }) => (
 export const Icon = styled(IconContainer)`
 	font-size: ${({ size = '24px' }) => size};
 	margin: ${({ margin = '0' }) => margin};
+	cursor: pointer;
+	color: ${({ disabeld }) => (disabeld ? '#ccc' : '#000')};
 `;
 
 IconContainer.propTypes = {

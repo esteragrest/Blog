@@ -12,20 +12,27 @@
       "login": "inoff",
       "password": "qwerty123",
       "registed_at": "2060-07-04 08:50",
-      "role_id": 2
+      "role_id": 1
+    },
+    {
+      "id": "0452",
+      "login": "jison",
+      "password": "qwerty123",
+      "registed_at": "2058-09-15 08:09",
+      "role_id": 0
     }
   ],
   "roles": [
     {
-      "id": 0,
+      "id": "0",
       "name": "Администратор"
     },
     {
-      "id": 1,
+      "id": "1",
       "name": "Модератор"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Читатель"
     }
   ],
