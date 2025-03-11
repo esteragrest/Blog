@@ -19,7 +19,7 @@
       "login": "jison",
       "password": "qwerty123",
       "registed_at": "2058-09-15 08:09",
-      "role_id": 0
+      "role_id": 2
     }
   ],
   "roles": [
@@ -73,5 +73,82 @@
       "published_at": "2023-11-24"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "id": "6d9f",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2049-01-13 20:13",
+      "content": "vbnkjvj"
+    },
+    {
+      "id": "8ff2",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2037-04-12 10:38",
+      "content": "uikjilkiojol"
+    },
+    {
+      "id": "8877",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2043-04-30 18:11",
+      "content": "комментарий банчана"
+    },
+    {
+      "id": "d98b",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2041-03-14 17:01",
+      "content": "sdfghjklkjgfddfui"
+    },
+    {
+      "id": "f9d9",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2049-06-23 05:38",
+      "content": "drftyuiooiuy"
+    },
+    {
+      "id": "209c",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2040-10-19 03:00",
+      "content": "sdfghjklkjhg"
+    },
+    {
+      "id": "72ba",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2036-10-27 00:46",
+      "content": "dfghjkjytrkjhgfghj"
+    },
+    {
+      "id": "f1d9",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2051-12-05 13:14",
+      "content": "wertyioiuyuioiuy"
+    },
+    {
+      "id": "c9dc",
+      "author_id": "001",
+      "post_id": "003",
+      "published_at": "2042-12-17 01:10",
+      "content": "dfghjklkjhjma"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "fb65",
+      "hash": "0.70357881958609347350375173846259713172912597656250",
+      "user": {
+        "id": "001",
+        "login": "bangchan",
+        "password": "qwerty123",
+        "registeredAt": "2025-07-09",
+        "roleId": 0
+      }
+    }
+  ]
 }
