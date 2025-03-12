@@ -15,7 +15,7 @@ const CommentContainer = ({ className, postId, id, author, content, publishedAt 
 				text: 'Удалить комментарий?',
 				onConfirm: () => {
 					dispatch(removeCommentAsync(requestServer, postId, id));
-					dispatch(CLOSE_MODAL);s
+					dispatch(CLOSE_MODAL);
 				},
 				onCancel: () => dispatch(CLOSE_MODAL),
 			}),

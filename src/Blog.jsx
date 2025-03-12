@@ -44,6 +44,7 @@ export const Blog = () => {
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<Users />} />
 					<Route path="/post/:postId" element={<Post />} />
+					<Route path="/post/:postId/edit" element={<Post />} />
 					<Route path="/post" element={<div>Новая статья</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
