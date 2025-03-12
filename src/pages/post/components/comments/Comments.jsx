@@ -6,15 +6,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectUserId } from '../../../../selectors';
 import { useServerRequest } from '../../../../hooks';
 import { addCommentAsync } from '../../../../actions';
+import PropTypes from 'prop-types';
 
 const CommentsContainer = ({ className, comments, postId }) => {
 	const [newComment, setNewComment] = useState('');
-	const dispath = useDispatch();
+	const dispatch = useDispatch();
 	const userId = useSelector(selectUserId);
 	const requestServer = useServerRequest();
 
 	const onNewCommentAdd = (userId, postId, content) => {
-		dispath(addCommentAsync(requestServer, userId, postId, content));
+		dispatch(addCommentAsync(requestServer, userId, postId, content));
 		setNewComment('');
 	};
 
@@ -39,6 +40,7 @@ const CommentsContainer = ({ className, comments, postId }) => {
 				{comments.map(({ id, author, content, publishedAt }) => (
 					<Comment
 						key={id}
+						postId={postId}
 						id={id}
 						author={author}
 						content={content}
@@ -67,3 +69,9 @@ export const Comments = styled(CommentsContainer)`
 		font-size: 18px;
 	}
 `;
+
+CommentsContainer.propTypes = {
+	className: PropTypes.string,
+	comments: PropTypes.string,
+	postId: PropTypes.string,
+};

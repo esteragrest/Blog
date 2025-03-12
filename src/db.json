@@ -75,48 +75,6 @@
   ],
   "comments": [
     {
-      "id": "6d9f",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2049-01-13 20:13",
-      "content": "vbnkjvj"
-    },
-    {
-      "id": "8ff2",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2037-04-12 10:38",
-      "content": "uikjilkiojol"
-    },
-    {
-      "id": "8877",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2043-04-30 18:11",
-      "content": "комментарий банчана"
-    },
-    {
-      "id": "d98b",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2041-03-14 17:01",
-      "content": "sdfghjklkjgfddfui"
-    },
-    {
-      "id": "f9d9",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2049-06-23 05:38",
-      "content": "drftyuiooiuy"
-    },
-    {
-      "id": "209c",
-      "author_id": "001",
-      "post_id": "003",
-      "published_at": "2040-10-19 03:00",
-      "content": "sdfghjklkjhg"
-    },
-    {
       "id": "72ba",
       "author_id": "001",
       "post_id": "003",
@@ -142,6 +100,28 @@
     {
       "id": "fb65",
       "hash": "0.70357881958609347350375173846259713172912597656250",
+      "user": {
+        "id": "001",
+        "login": "bangchan",
+        "password": "qwerty123",
+        "registeredAt": "2025-07-09",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "250a",
+      "hash": "0.91338173123090116156674866942921653389930725097656",
+      "user": {
+        "id": "001",
+        "login": "bangchan",
+        "password": "qwerty123",
+        "registeredAt": "2025-07-09",
+        "roleId": 0
+      }
+    },
+    {
+      "id": "babe",
+      "hash": "0.86775851340579013282194864586926996707916259765625",
       "user": {
         "id": "001",
         "login": "bangchan",
