@@ -1,17 +1,46 @@
 import { Icon } from '../../../../components';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
+import { useServerRequest } from '../../../../hooks';
+import { openModal, CLOSE_MODAL, removePostAsync } from '../../../../actions';
+import { useNavigate } from 'react-router-dom';
 
-const SpecialPanelContainer = ({ className, publishedAt, margin, editButton }) => {
+const SpecialPanelContainer = ({ className, id, publishedAt, margin, editButton }) => {
+	const dispatch = useDispatch();
+	const requestServer = useServerRequest();
+	const navigate = useNavigate();
+
+	const onPostRemove = (id) => {
+		dispatch(
+			openModal({
+				text: 'Удалить статью?',
+				onConfirm: () => {
+					dispatch(removePostAsync(requestServer, id)).then(() => {
+						navigate('/');
+					});
+					dispatch(CLOSE_MODAL);
+				},
+				onCancel: () => dispatch(CLOSE_MODAL),
+			}),
+		);
+	};
 	return (
 		<div className={className}>
 			<div className="published-at">
-				<Icon id="fa-calendar-o" margin="0 7px 0 0" size="16px" />
+				{publishedAt && <Icon id="fa-calendar-o" margin="0 7px 0 0" size="16px" inactive={true} />}
 				{publishedAt}
 			</div>
 			<div className="buttons">
 				{editButton}
-				<Icon id="fa-trash-o" size="21px" />
+				{publishedAt && (
+					<Icon
+						id="fa-trash-o"
+						margin="0 0 0 7px"
+						size="21px"
+						onClick={() => onPostRemove(id)}
+					/>
+				)}
 			</div>
 		</div>
 	);
@@ -40,7 +69,8 @@ export const SpecialPanel = styled(SpecialPanelContainer)`
 
 SpecialPanelContainer.propTypes = {
 	className: PropTypes.string,
+	id: PropTypes.string,
 	publishedAt: PropTypes.string,
 	margin: PropTypes.string,
-	editButton: PropTypes.element
+	editButton: PropTypes.element,
 };

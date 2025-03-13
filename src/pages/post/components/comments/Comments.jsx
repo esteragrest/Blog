@@ -72,6 +72,6 @@ export const Comments = styled(CommentsContainer)`
 
 CommentsContainer.propTypes = {
 	className: PropTypes.string,
-	comments: PropTypes.string,
+	comments: PropTypes.array,
 	postId: PropTypes.string,
 };
