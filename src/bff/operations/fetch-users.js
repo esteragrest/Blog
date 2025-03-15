@@ -14,10 +14,10 @@ export const fetchUsers = async (hash) => {
 		};
 	}
 
-	const roles = await getUsers();
+	const users = await getUsers();
 
 	return {
 		error: null,
-		res: roles,
+		res: users,
 	};
 };
