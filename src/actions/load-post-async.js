@@ -1,7 +1,10 @@
 import { setPostData } from './set-post-data';
 
 export const loadPostAsync = (requestServer, postId) => (dispatch) => {
-	requestServer('fetchPost', postId).then((postData) => {
-		dispatch(setPostData(postData.res));
-	});
+    return requestServer('fetchPost', postId).then((postData) => {
+        if (postData.res) {
+            dispatch(setPostData(postData.res)); // Диспатч данных в Redux
+        }
+        return postData; // Возвращаем postData для цепочки then
+    });
 };
