@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon, H2 } from '../../../../components';
 import { SpecialPanel } from '../special-panel/SpecialPanel';
 import { useNavigate } from 'react-router-dom';
+import { PROP_TYPE } from '../../../../constans';
 
 const PostContentContainer = ({
 	className,
@@ -45,7 +45,6 @@ export const PostContent = styled(PostContentContainer)`
 	}
 `;
 
-PostContentContainer.propTypes = {
-	className: PropTypes.string,
-	post: PropTypes.object,
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
 };

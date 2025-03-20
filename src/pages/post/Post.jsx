@@ -60,7 +60,3 @@ export const Post = styled(PostContainer)`
 	margin: 40px;
 	padding: 0px 80px;
 `;
-
-PostContainer.propTypes = {
-	className: PropTypes.string,
-};

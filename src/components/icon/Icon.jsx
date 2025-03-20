@@ -11,11 +11,11 @@ export const Icon = styled(IconContainer)`
 	font-size: ${({ size = '24px' }) => size};
 	margin: ${({ margin = '0' }) => margin};
 	cursor: ${({ inactive }) => (inactive ? 'default' : 'pointer')};
-	color: ${({ disabeld }) => (disabeld ? '#ccc' : '#000')};
+	color: ${({ disabled }) => (disabled ? '#ccc' : '#000')};
 `;
 
-IconContainer.propTypes = {
-	className: PropTypes.any,
-	id: PropTypes.string,
+Icon.propTypes = {
+	className: PropTypes.string,
+	id: PropTypes.string.isRequired,
 	inactive: PropTypes.bool,
 };

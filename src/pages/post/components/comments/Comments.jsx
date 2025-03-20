@@ -7,7 +7,7 @@ import { selectUserId, selectUserRole } from '../../../../selectors';
 import { useServerRequest } from '../../../../hooks';
 import { addCommentAsync } from '../../../../actions';
 import PropTypes from 'prop-types';
-import { ROLE } from '../../../../constans';
+import { PROP_TYPE, ROLE } from '../../../../constans';
 
 const CommentsContainer = ({ className, comments, postId }) => {
 	const [newComment, setNewComment] = useState('');
@@ -75,8 +75,7 @@ export const Comments = styled(CommentsContainer)`
 	}
 `;
 
-CommentsContainer.propTypes = {
-	className: PropTypes.string,
-	comments: PropTypes.array,
-	postId: PropTypes.string,
+Comments.propTypes = {
+	comments: PropTypes.arrayOf(PROP_TYPE.COMMENT).isRequired,
+	postId: PropTypes.string.isRequired,
 };

@@ -21,7 +21,7 @@ export const Button = styled(ButtonContainer)`
 	cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
 `;
 
-ButtonContainer.propTypes = {
-	className: PropTypes.string,
+Button.propTypes = {
+	children: PropTypes.node.isRequired,
 	width: PropTypes.string,
 };

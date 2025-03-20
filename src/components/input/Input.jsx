@@ -17,7 +17,6 @@ export const Input = styled(InputContainer)`
 	font-size: 18px;
 `;
 
-InputContainer.propTypes = {
-	className: PropTypes.string,
+Input.propTypes = {
 	width: PropTypes.string,
 };

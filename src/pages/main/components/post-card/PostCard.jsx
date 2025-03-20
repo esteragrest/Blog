@@ -80,11 +80,10 @@ export const PostCard = styled(PostCardContainer)`
 	}
 `;
 
-PostCardContainer.propTypes = {
-	className: PropTypes.string,
-	id: PropTypes.string,
-	title: PropTypes.string,
-	publishedAt: PropTypes.string,
-	commentsCount: PropTypes.number,
-	imageUrl: PropTypes.string,
+PostCard.propTypes = {
+	id: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	commentsCount: PropTypes.number.isRequired,
+	imageUrl: PropTypes.string.isRequired,
 };

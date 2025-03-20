@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { PrivateContent, H2 } from '../../components';
 import { useServerRequest } from '../../hooks';
 import { TabelRow, UserRow } from './components';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ROLE } from '../../constans';
 import { checkAccess } from '../../utils/check-access';
@@ -82,7 +81,3 @@ export const Users = styled(UsersContainer)`
 	margin: 0 auto;
 	font-size: 18px;
 `;
-
-UsersContainer.propTypes = {
-	className: PropTypes.string,
-};

@@ -72,5 +72,5 @@ const ControlPanelContainer = ({ className }) => {
 export const ControlPanel = styled(ControlPanelContainer)``;
 
 ControlPanelContainer.propTypes = {
-	className: PropTypes.any,
+	className: PropTypes.string,
 };

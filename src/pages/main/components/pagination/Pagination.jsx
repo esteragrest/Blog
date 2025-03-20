@@ -47,9 +47,8 @@ export const Pagination = styled(PaginationContainer)`
 	}
 `;
 
-PaginationContainer.propTypes = {
-	className: PropTypes.string,
-	lastPage: PropTypes.number,
-	page: PropTypes.number,
-	setPage: PropTypes.func,
+Pagination.propTypes = {
+	lastPage: PropTypes.number.isRequired,
+	page: PropTypes.number.isRequired,
+	setPage: PropTypes.func.isRequired,
 };

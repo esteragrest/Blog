@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { TabelRow } from '../tabel-row/TabelRow';
 import { useState } from 'react';
 import { useServerRequest } from '../../../../hooks';
+import { PROP_TYPE, ROLE } from '../../../../constans';
 
 const UserRowContainer = ({
 	className,
@@ -15,7 +16,6 @@ const UserRowContainer = ({
 	onUserRemove,
 }) => {
 	const requestServer = useServerRequest('fetchRoles');
-
 	const [initialRoleId, setInitialRoleId] = useState(userRoleId);
 	const [selectedRoleId, setSelectedRoleId] = useState(userRoleId);
 
@@ -47,7 +47,7 @@ const UserRowContainer = ({
 					<Icon
 						id="fa-floppy-o"
 						margin="0 0 0 10px"
-						disabeld={saveButtonDisabeld}
+						disabled={saveButtonDisabeld}
 						onClick={() => onRoleSave(id, selectedRoleId)}
 					/>
 				</div>
@@ -73,13 +73,11 @@ export const UserRow = styled(UserRowContainer)`
 	}
 `;
 
-UserRowContainer.propTypes = {
-	className: PropTypes.string,
-	id: PropTypes.string,
-	login: PropTypes.string,
-	registeredAt: PropTypes.string,
-	roleId: PropTypes.number,
-	userRoleId: PropTypes.string,
-	roles: PropTypes.array,
-	onUserRemove: PropTypes.func,
+UserRow.propTypes = {
+	id: PropTypes.string.isRequired,
+	login: PropTypes.string.isRequired,
+	registeredAt: PropTypes.string.isRequired,
+	roleId: PropTypes.number.isRequired,
+	roles: PropTypes.arrayOf(PROP_TYPE.ROLE).isRequired,
+	onUserRemove: PropTypes.func.isRequired,
 };

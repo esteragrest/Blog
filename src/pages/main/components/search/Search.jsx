@@ -33,8 +33,7 @@ export const Search = styled(SearchContainer)`
 	}
 `;
 
-SearchContainer.propTypes = {
-	className: PropTypes.string,
-	searchPhrase: PropTypes.string,
-	onChange: PropTypes.func,
+Search.propTypes = {
+	searchPhrase: PropTypes.string.isRequired,
+	onChange: PropTypes.func.isRequired,
 };
